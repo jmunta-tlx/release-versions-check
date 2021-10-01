@@ -15,5 +15,10 @@ mvn versions:set -DnewVersion=$JAR_VERSION
 mvn package
 mkdir release && cp target/*.jar release
 
+cd release && JAR_NAME="`ls *.jar`"
+
+docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$JAR_VERSION  --build-arg ARTIFACT=${JAR_NAME} .
+echo docker push $ECR_REGISTRY/$ECR_REPOSITORY:$JAR_VERSION
+
 printenv
 
