@@ -12,6 +12,7 @@ on:
 
 jobs:
   ci:
+    if: github.ref == 'refs/heads/develop' && github.event_name == 'push'
     runs-on: ubuntu-latest
 
     steps:
@@ -42,3 +43,4 @@ jobs:
         ECR_REGISTRY: aws_registry
         ECR_REPOSITORY: tlx-engine/apiserver
       run: chmod +x ./prepare-release.sh && npx semantic-release
+
