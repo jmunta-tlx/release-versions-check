@@ -6,12 +6,14 @@ on:
       - 'main'
       - 'develop'
   pull_request:
+    types: [closed]
     branches:
       - 'main'
       - 'develop'
 
 jobs:
   ci:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
