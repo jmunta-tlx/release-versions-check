@@ -6,14 +6,13 @@ on:
       - 'main'
       - 'develop'
   pull_request:
-    types: [closed]
     branches:
       - 'main'
       - 'develop'
 
 jobs:
   ci:
-    if: github.event.pull_request.merged == true
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
 
     steps:
