@@ -19,7 +19,7 @@ jobs:
     - uses: actions/checkout@v1
     - id: my-app-ci
       name: Tlx Continuous Integration
-      uses: jmunta-tlx/tlx-cicd@v3
+      uses: jmunta-tlx/tlx-cicd@v4
       with:
         project-name: 'my-app'
         project-type: 'mvn'
@@ -29,17 +29,7 @@ jobs:
           SLACK_WEBHOOK: ${{secrets.SLACK_WEBHOOK}}
           REPORT_NOTIFY: "slack#do_not_use_channel"
           SLACK_TITLE: Auto CI trigger - ${{ github.event_name }} in ${{ github.repository }} ${{ github.ref }} <${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ github.sha }}> by ${{ github.actor}}
-    - name: setup node
-      uses: actions/setup-node@v1
-      with:
-        node-version: 14
-      env:
-        GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
-    - name: setup semantic-release
-      run: npm install -g semantic-release @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/exec semantic-release/git semantic-release/release-notes-generator
-    - name: release
-      env:
-        GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
-        ECR_REGISTRY: aws_registry
-        ECR_REPOSITORY: tlx-engine/apiserver
-      run: chmod +x ./prepare-release.sh && npx semantic-release
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+          ECR_REGISTRY: aws_registry
+          ECR_REPOSITORY: tlx-engine/apiserver
+         
