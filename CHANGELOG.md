@@ -1,5 +1,13 @@
 # Semantic Versioning Changelog
 
+## [2.3.3](https://github.com/jmunta-tlx/release-versions-check/compare/v2.3.2...v2.3.3) (2021-10-03)
+
+
+### Bug Fixes
+
+* fixing the path for release script ([af83129](https://github.com/jmunta-tlx/release-versions-check/commit/af83129338b7aecbffaa0dec78a6d03f6cbb4107))
+* trigger ([9fddb49](https://github.com/jmunta-tlx/release-versions-check/commit/9fddb49f91086d1c206b9a73e14a2f24390bb51b))
+
 ## [2.3.2](https://github.com/jmunta-tlx/release-versions-check/compare/v2.3.1...v2.3.2) (2021-10-03)
 
 
