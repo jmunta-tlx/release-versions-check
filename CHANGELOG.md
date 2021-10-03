@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [2.3.2](https://github.com/jmunta-tlx/release-versions-check/compare/v2.3.1...v2.3.2) (2021-10-03)
+
+
+### Bug Fixes
+
+* cicd script #jira ([0456e61](https://github.com/jmunta-tlx/release-versions-check/commit/0456e61ea029461a28527dd8e6a9a0a8df169a14))
+
 # [2.3.0](https://github.com/jmunta-tlx/release-versions-check/compare/v2.2.0...v2.3.0) (2021-09-30)
 
 
