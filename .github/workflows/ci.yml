@@ -19,7 +19,7 @@ jobs:
     - uses: actions/checkout@v1
     - id: my-app-ci
       name: Tlx Continuous Integration
-      uses: jmunta-tlx/tlx-cicd@v5
+      uses: jmunta-tlx/tlx-cicd@v6
       with:
         project-name: 'my-app'
         project-type: 'mvn'
