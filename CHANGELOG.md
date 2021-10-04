@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [2.3.6](https://github.com/jmunta-tlx/release-versions-check/compare/v2.3.5...v2.3.6) (2021-10-04)
+
+
+### Bug Fixes
+
+* ecr repo issue ([460bab8](https://github.com/jmunta-tlx/release-versions-check/commit/460bab85bdb192d3bbcab6d31c7d33992af6fe25))
+
 ## [2.3.5](https://github.com/jmunta-tlx/release-versions-check/compare/v2.3.4...v2.3.5) (2021-10-04)
 
 
