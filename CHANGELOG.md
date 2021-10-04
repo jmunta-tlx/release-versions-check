@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [2.3.8](https://github.com/jmunta-tlx/release-versions-check/compare/v2.3.7...v2.3.8) (2021-10-04)
+
+
+### Bug Fixes
+
+* feature commit testing #jira ([cfac5e5](https://github.com/jmunta-tlx/release-versions-check/commit/cfac5e50d77d62fb389e9341a37e758b3244149c))
+
 ## [2.3.7](https://github.com/jmunta-tlx/release-versions-check/compare/v2.3.6...v2.3.7) (2021-10-04)
 
 
