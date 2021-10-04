@@ -1,5 +1,5 @@
 {
-     "ci": true,
+     "ci": false,
      "branches": ["main", "master", "develop"],
      "repositoryUrl": "https://github.com/jmunta-tlx/release-versions-check",
      "debug": "true",
