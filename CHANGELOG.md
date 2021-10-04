@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [2.3.5](https://github.com/jmunta-tlx/release-versions-check/compare/v2.3.4...v2.3.5) (2021-10-04)
+
+
+### Bug Fixes
+
+* using latest ci version8 ([3f7a11b](https://github.com/jmunta-tlx/release-versions-check/commit/3f7a11b2b22ad697abd4b944139e7945297632ef))
+
 ## [2.3.4](https://github.com/jmunta-tlx/release-versions-check/compare/v2.3.3...v2.3.4) (2021-10-04)
 
 
