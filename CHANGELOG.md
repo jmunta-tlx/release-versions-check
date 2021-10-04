@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [2.3.7](https://github.com/jmunta-tlx/release-versions-check/compare/v2.3.6...v2.3.7) (2021-10-04)
+
+
+### Bug Fixes
+
+* aws region for docker push ([e5b824b](https://github.com/jmunta-tlx/release-versions-check/commit/e5b824b1471e113d545dc21924280d40a3fa0ff8))
+
 ## [2.3.6](https://github.com/jmunta-tlx/release-versions-check/compare/v2.3.5...v2.3.6) (2021-10-04)
 
 
