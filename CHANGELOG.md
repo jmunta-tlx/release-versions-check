@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [2.3.4](https://github.com/jmunta-tlx/release-versions-check/compare/v2.3.3...v2.3.4) (2021-10-04)
+
+
+### Bug Fixes
+
+* enabling docker push ([efe78b1](https://github.com/jmunta-tlx/release-versions-check/commit/efe78b14eaad30cbee63c6cbf989a3435f05d74f))
+
 ## [2.3.3](https://github.com/jmunta-tlx/release-versions-check/compare/v2.3.2...v2.3.3) (2021-10-03)
 
 
