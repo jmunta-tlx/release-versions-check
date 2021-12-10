@@ -1,4 +1,4 @@
-## [2.4.2] (2021-12-09)
+## [2.4.2] changes (2021-12-09)
     * fix: adding sonar project (75d3999)
     * Merge pull request #26 from jmunta-tlx/rpuranik (14209e3)
     * Merge branch 'develop' into rpuranik (b2728eb)
