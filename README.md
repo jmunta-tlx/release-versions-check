@@ -3,6 +3,6 @@ Sample project to demo on release versions check
 
 # test
 
-# test2
+# test2 changes
 
 
