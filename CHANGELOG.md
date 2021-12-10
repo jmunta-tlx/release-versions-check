@@ -1,3 +1,20 @@
+## [v2.5.1] (2021-12-09)
+
+    * fix: adding sonar project (75d3999)
+    * Merge pull request #26 from jmunta-tlx/rpuranik (14209e3)
+    * Merge branch 'develop' into rpuranik (b2728eb)
+    * fix: feature commit test #jira (17ff47e)
+    * Merge pull request #25 from jmunta-tlx/rpuranik-tlx-patch-2-1 (362978d)
+    * Update README.md (599e773)
+    * Merge pull request #22 from jmunta-tlx/rpuranik (4013d3f)
+    * fix: feature commit testing #jira (e011d9d)
+    * Merge pull request #21 from jmunta-tlx/rpuranik-tlx-patch-1 (c48dd34)
+    * fix: feature commit testing #jira (9ea51d7)
+    * Merge pull request #20 from jmunta-tlx/rpuranik (e58647d)
+    * fix: testing feature commit #jira (04b91e7)
+    * Merge pull request #8 from jmunta-tlx/rpuranik-tlx-patch-1 (3337d15)
+    * Update README.md (1438852)
+
 # Semantic Versioning Changelog
 
 ## [2.4.3](https://github.com/jmunta-tlx/release-versions-check/compare/v2.4.2...v2.4.3) (2021-12-10)
