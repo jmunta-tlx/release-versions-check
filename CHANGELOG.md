@@ -1,3 +1,12 @@
+# Semantic Versioning Changelog
+
+## [2.6.2](https://github.com/jmunta-tlx/release-versions-check/compare/v2.6.1...v2.6.2) (2021-12-10)
+
+
+### Bug Fixes
+
+* v2.6.1 commits ([fc72592](https://github.com/jmunta-tlx/release-versions-check/commit/fc725920fbd0a039ac03bcd787e6ca0e480bf525))
+
 ## [v2.6.1] (2021-12-09)
 
     * fix: adding sonar project (75d3999)
