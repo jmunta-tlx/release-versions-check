@@ -1,5 +1,5 @@
 # release-versions-check
 Sample project to demo on release versions check         
  
-# test2
+# test2 details
 
