@@ -9,3 +9,5 @@ Sample project to demo on release versions check
 
 Patch changes
 
+Feat changes
+
