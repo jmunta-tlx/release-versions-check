@@ -1,3 +1,12 @@
+# Semantic Versioning Changelog
+
+## [2.8.2](https://github.com/jmunta-tlx/release-versions-check/compare/v2.8.1...v2.8.2) (2021-12-15)
+
+
+### Bug Fixes
+
+* v2.8.1 commits ([5124199](https://github.com/jmunta-tlx/release-versions-check/commit/5124199ec73125a7cf5de515c4c108d318c1c6db))
+
 ## [v2.8.1] (2021-12-14)
 # Semantic Versioning Changelog
 
