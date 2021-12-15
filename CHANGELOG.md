@@ -1,3 +1,4 @@
+## [v2.8.1] (2021-12-14)
 # Semantic Versioning Changelog
 
 ## [2.6.2](https://github.com/jmunta-tlx/release-versions-check/compare/v2.6.1...v2.6.2) (2021-12-10)
