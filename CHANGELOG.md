@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [2.9.1](https://github.com/jmunta-tlx/release-versions-check/compare/v2.9.0...v2.9.1) (2021-12-18)
+
+
+### Bug Fixes
+
+* cicd v28 ([59cd26f](https://github.com/jmunta-tlx/release-versions-check/commit/59cd26f4f123be9e02196d02496151028d1f0633))
+
 # [2.9.0](https://github.com/jmunta-tlx/release-versions-check/compare/v2.8.3...v2.9.0) (2021-12-18)
 
 
