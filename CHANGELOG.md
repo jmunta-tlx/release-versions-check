@@ -1,3 +1,12 @@
+# Semantic Versioning Changelog
+
+## [2.9.15](https://github.com/jmunta-tlx/release-versions-check/compare/v2.9.14...v2.9.15) (2021-12-23)
+
+
+### Bug Fixes
+
+* v2.9.14 commits ([91bfc4a](https://github.com/jmunta-tlx/release-versions-check/commit/91bfc4a7bed7d17f75aa04362c8f975ecfb46bb7))
+
 ## [v2.9.14] (2021-12-23)
 # Semantic Versioning Changelog
 
