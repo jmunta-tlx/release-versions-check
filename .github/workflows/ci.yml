@@ -28,15 +28,15 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
     - id: my-app-ci
       name: Tlx Continuous Integration
-      uses: jmunta-tlx/tlx-cicd@v33
+      uses: jmunta-tlx/tlx-cicd@v35
       with:
-        project-name: 'my-app'
+        project-name: 'release-versions-check'
         project-branch: 'main'
         project-type: 'mvn'
         project-root-account: 'trustlogix'
         git-user-name: 'jmunta-tlx'
         git-user-email: 'jmunta@trustlogix.io'
-        project-artifact: target/my-app-1.0-SNAPSHOT.jar
+        project-artifact: target/release-versions-check-1.0-SNAPSHOT.jar
         project-steps: all
       env:
           SLACK_WEBHOOK: ${{secrets.SLACK_WEBHOOK}}
