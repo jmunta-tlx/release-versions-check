@@ -28,7 +28,7 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
     - id: my-app-ci
       name: Tlx Continuous Integration
-      uses: jmunta-tlx/tlx-cicd@v35
+      uses: jmunta-tlx/tlx-cicd@v36
       with:
         project-name: 'release-versions-check'
         project-root-account: 'jmunta-tlx'
