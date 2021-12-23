@@ -33,7 +33,7 @@ jobs:
         project-name: 'release-versions-check'
         project-branch: 'main'
         project-type: 'mvn'
-        project-root-account: 'trustlogix'
+        project-root-account: 'jmunta-tlx'
         git-user-name: 'jmunta-tlx'
         git-user-email: 'jmunta@trustlogix.io'
         project-artifact: target/release-versions-check-1.0-SNAPSHOT.jar
