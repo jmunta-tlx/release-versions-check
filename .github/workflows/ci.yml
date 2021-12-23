@@ -28,7 +28,7 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
     - id: my-app-ci
       name: Tlx Continuous Integration
-      uses: jmunta-tlx/tlx-cicd@v31
+      uses: jmunta-tlx/tlx-cicd@v33
       with:
         project-name: 'my-app'
         project-branch: 'main'
