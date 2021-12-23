@@ -1,3 +1,8 @@
+## [v2.9.16] (2021-12-23)
+
+    * Merge branch 'main' of http://github.com/jmunta-tlx/release-versions-check (5cf3243)
+    * fix: readme3 again (f31df7a)
+
 # Semantic Versioning Changelog
 
 ## [2.9.13](https://github.com/jmunta-tlx/release-versions-check/compare/v2.9.12...v2.9.13) (2021-12-23)
