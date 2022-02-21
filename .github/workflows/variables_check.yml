@@ -1,0 +1,88 @@
+name: Dev Access Policies integration tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      api_endpoint:
+        description: api url 
+        required: true
+        default: "https://devapi.trustlogix.io"
+        type: string
+      tenant_id:
+        description: tenant id
+        required: true 
+        default: "2c91808276d4c3b80176d4cb01d30001"
+      snowflake_account_id: 
+        description: snowflake account id
+        required: true
+        default: "2c91808277cd6e710177d2d8814f0141"
+      redshift_account_id:
+        description: redshift account id
+        required: true
+        default: "2c91808277cd6e710177d4e52e5101a3"
+      databricks_account_id:
+        description: databricks account id
+        default: "2c91808277cd6e710177d4df41870198"
+      aurora_account_id:
+        description: aurora account id
+        required: true
+        default: "2c9180827ca889ce017cb6a80777023d"
+      trustlet_service_login_id:
+        description: trustlet service login id
+        required: true
+        default: "trustlet-2c91808276d4c3b80176d4cb01d30001@trustlogix.io"
+      trustlet_service_password_path:
+        description: trustlet service password path
+        required: true
+        default: "/tlx-dev-30001/tenant/password"
+  schedule:
+    - cron: "0 */6 * * *"
+  
+jobs:
+  integration-tests-access-policies:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_9242 }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_9242 }}
+        aws-region: us-east-1
+    - name: Run access policies integration tests
+      env:
+          SLACK_WEBHOOK: ${{secrets.SLACK_WEBHOOK}}
+          REPORT_NOTIFY: "slack#tlx_release"
+          SLACK_TITLE:  Access policies integration test results
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+          API_ENDPOINT: ${{ github.event.inputs.api_endpoint }}
+          AWS_REGION: us-east-1
+          TENANT_ID: ${{ github.event.inputs.tenant_id }}
+          SNOWFLAKE_ACCOUNT_ID: ${{ github.event.inputs.snowflake_account_id }}
+          REDSHIFT_ACCOUNT_ID: ${{ github.event.inputs.redshift_account_id }}
+          DATABRICKS_ACCOUNT_ID: ${{ github.event.inputs.databricks_account_id}}
+          AURORA_ACCOUNT_ID: ${{ github.event.inputs.aurora_account_id }}
+          TEST_CLASS: accesspolicies
+          TRUSTLET_SERVICE_LOGIN_ID: ${{ github.event.inputs.trustlet_service_login_id }}
+          TRUSTLET_SERVICE_PASSWORD_PATH: ${{ github.event.inputs.trustlet_service_password_path }}
+      run: |
+        ENV_FILE=/tmp/tlx_dev_env.sh
+        if [ "${TENANT_ID}" == "" ]; then
+          aws cp s3://devops/${ENV_FILE} /tmp/tlx_dev_env.sh
+          . /tmp/tlx_dev_env.sh
+          echo TENANT_ID=${TENANT_ID} >> ${GITHUB_ENV}
+        else
+          echo "TENANT_ID=${TENANT_ID}" > ${ENV_FILE}
+          echo "API_ENDPOINT=${API_ENDPOINT}" >> ${ENV_FILE}
+          echo "SNOWFLAKE_ACCOUNT_ID=${SNOWFLAKE_ACCOUNT_ID}" >> ${ENV_FILE}
+          echo "REDSHIFT_ACCOUNT_ID=${REDSHIFT_ACCOUNT_ID}" >> ${ENV_FILE}
+          echo "DATABRICKS_ACCOUNT_ID=${DATABRICKS_ACCOUNT_ID}" >> ${ENV_FILE}
+          echo "AURORA_ACCOUNT_ID=${AURORA_ACCOUNT_ID}" >> ${ENV_FILE}
+          echo "TRUSTLET_SERVICE_LOGIN_ID=${TRUSTLET_SERVICE_LOGIN_ID}" >> ${ENV_FILE}
+          echo "TRUSTLET_SERVICE_PASSWORD_PATH=${TRUSTLET_SERVICE_PASSWORD_PATH}" >> ${ENV_FILE}
+          aws cp ${ENV_FILE} s3://devops/tlx_dev_env.sh
+        fi
+        
+        
+        
+    
