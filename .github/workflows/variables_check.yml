@@ -90,6 +90,14 @@ jobs:
           echo "TRUSTLET_SERVICE_PASSWORD_PATH=${TRUSTLET_SERVICE_PASSWORD_PATH}" >> ${ENV_FILE}
           aws s3 cp ${ENV_FILE} s3://tlx-devops/tlx_dev_env.sh
         fi
+          echo "TENANT_ID=${TENANT_ID}"
+          echo "API_ENDPOINT=${API_ENDPOINT}"
+          echo "SNOWFLAKE_ACCOUNT_ID=${SNOWFLAKE_ACCOUNT_ID}"
+          echo "REDSHIFT_ACCOUNT_ID=${REDSHIFT_ACCOUNT_ID}"
+          echo "DATABRICKS_ACCOUNT_ID=${DATABRICKS_ACCOUNT_ID}"
+          echo "AURORA_ACCOUNT_ID=${AURORA_ACCOUNT_ID}"
+          echo "TRUSTLET_SERVICE_LOGIN_ID=${TRUSTLET_SERVICE_LOGIN_ID}"
+          echo "TRUSTLET_SERVICE_PASSWORD_PATH=${TRUSTLET_SERVICE_PASSWORD_PATH}"
         
         
         
