@@ -36,7 +36,7 @@ on:
         required: true
         default: "/tlx-dev-30001/tenant/password"
   schedule:
-    - cron: "0 5/* * * *"
+    - cron: "5 * * * *"
   
 jobs:
   integration-tests-access-policies:
