@@ -71,6 +71,13 @@ jobs:
           aws cp s3://devops/${ENV_FILE} /tmp/tlx_dev_env.sh
           . /tmp/tlx_dev_env.sh
           echo TENANT_ID=${TENANT_ID} >> ${GITHUB_ENV}
+          echo "API_ENDPOINT=${API_ENDPOINT}" >> ${GITHUB_ENV}
+          echo "SNOWFLAKE_ACCOUNT_ID=${SNOWFLAKE_ACCOUNT_ID}" >> ${GITHUB_ENV}
+          echo "REDSHIFT_ACCOUNT_ID=${REDSHIFT_ACCOUNT_ID}" >> ${GITHUB_ENV}
+          echo "DATABRICKS_ACCOUNT_ID=${DATABRICKS_ACCOUNT_ID}" >> ${GITHUB_ENV}
+          echo "AURORA_ACCOUNT_ID=${AURORA_ACCOUNT_ID}" >> ${GITHUB_ENV}
+          echo "TRUSTLET_SERVICE_LOGIN_ID=${TRUSTLET_SERVICE_LOGIN_ID}" >> ${GITHUB_ENV}
+          echo "TRUSTLET_SERVICE_PASSWORD_PATH=${TRUSTLET_SERVICE_PASSWORD_PATH}" >> ${GITHUB_ENV}
         else
           echo "TENANT_ID=${TENANT_ID}" > ${ENV_FILE}
           echo "API_ENDPOINT=${API_ENDPOINT}" >> ${ENV_FILE}
