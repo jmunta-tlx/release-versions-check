@@ -68,7 +68,7 @@ jobs:
       run: |
         ENV_FILE=/tmp/tlx_dev_env.sh
         if [ "${TENANT_ID}" == "" ]; then
-          aws cp s3://devops/${ENV_FILE} /tmp/tlx_dev_env.sh
+          aws s3 cp s3://devops/${ENV_FILE} /tmp/tlx_dev_env.sh
           . /tmp/tlx_dev_env.sh
           echo TENANT_ID=${TENANT_ID} >> ${GITHUB_ENV}
           echo "API_ENDPOINT=${API_ENDPOINT}" >> ${GITHUB_ENV}
@@ -87,7 +87,7 @@ jobs:
           echo "AURORA_ACCOUNT_ID=${AURORA_ACCOUNT_ID}" >> ${ENV_FILE}
           echo "TRUSTLET_SERVICE_LOGIN_ID=${TRUSTLET_SERVICE_LOGIN_ID}" >> ${ENV_FILE}
           echo "TRUSTLET_SERVICE_PASSWORD_PATH=${TRUSTLET_SERVICE_PASSWORD_PATH}" >> ${ENV_FILE}
-          aws cp ${ENV_FILE} s3://devops/tlx_dev_env.sh
+          aws s3 cp ${ENV_FILE} s3://devops/tlx_dev_env.sh
         fi
         
         
