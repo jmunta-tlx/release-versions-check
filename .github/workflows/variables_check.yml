@@ -66,6 +66,7 @@ jobs:
           TRUSTLET_SERVICE_LOGIN_ID: ${{ github.event.inputs.trustlet_service_login_id }}
           TRUSTLET_SERVICE_PASSWORD_PATH: ${{ github.event.inputs.trustlet_service_password_path }}
       run: |
+        TENANT_ID=""
         ENV_FILE=/tmp/tlx_dev_env.sh
         if [ "${TENANT_ID}" == "" ]; then
           aws s3 cp s3://tlx-devops/tlx_dev_env.sh ${ENV_FILE}
